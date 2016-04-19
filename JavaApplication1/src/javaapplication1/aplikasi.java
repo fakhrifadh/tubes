@@ -293,6 +293,20 @@ public class aplikasi {
        for(int i = 1; i < daftarPembimbing.length; i++){
            System.out.println(1+i+". "+daftarPembimbing[i].nama);
        }
+       System.out.println("kembali? (Y) ");
+       String back = scan.nextLine();
+       if(back == "Y"){
+       kelolapembimbing();
+        }
+   }
+   public void addpembimbing(){
+       System.out.println("tambah pembimbing");
+       System.out.println("masukan nama lokasi");
+       String nama = scan.nextLine();
+       for(int i=0; i < daftarLokasi.length; i++){
+           if(daftarDaftar[i])
+       }
+       
    }
    
    public void lihatgeladisaya(){

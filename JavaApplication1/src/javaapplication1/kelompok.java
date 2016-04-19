@@ -13,7 +13,8 @@ package javaapplication1;
 public class kelompok {
     public String namaKelompok;
     public mahasiswa anggota[] = new mahasiswa[4];
-    int i=0;
+    public pembimbing pembimbingkel[] = new pembimbing[2];
+    int i,j=0;
 
     public void setNamaKelompok(String namaKelompok) {
         this.namaKelompok = namaKelompok;
@@ -29,6 +30,13 @@ public class kelompok {
             i++;
         }
         else System.out.println("kelompok penuh");
+    }
+     public void add_pembimbing(pembimbing p){
+        if (j < 4){
+            pembimbingkel[j]=p;
+            j++;
+        }
+        else System.out.println("pembimbing kelompok penuh");
     }
     
     public mahasiswa getAnggotabyIndex(int n){
