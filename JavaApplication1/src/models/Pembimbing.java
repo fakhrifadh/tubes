@@ -4,15 +4,16 @@
  * and open the template in the editor.
  */
 
-package javaapplication1;
+package models;
 
 /**
  *
  * @author JOKER
  */
-public class admin extends orang{
-
-    public admin(String nama, String id, String email, int jenis_user) {
-        super(nama, id, email, jenis_user);
+public class Pembimbing extends Orang {
+    
+    public Pembimbing(String nama, String noId, String nohp) {
+        super(nama, noId, nohp, "pembimbing");
     }
+    
 }
