@@ -62,14 +62,29 @@ public class MenuUtama extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         buttonkeluar = new javax.swing.JButton();
 
-        jButtonlogin.setText("masuk dengan id");
+        jButtonlogin.setText("Masuk dengan ID");
+        jButtonlogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonloginActionPerformed(evt);
+            }
+        });
 
-        buttonmhs.setText("Daftar sebagai  mahasiswa");
+        buttonmhs.setText("Daftar sebagai  Mahasiswa");
+        buttonmhs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonmhsActionPerformed(evt);
+            }
+        });
 
-        buttonpem.setText("Daftar sebagai pembimbing");
+        buttonpem.setText("Daftar sebagai Pembimbing");
+        buttonpem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonpemActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel1.setText("SISFO GELADI");
+        jLabel1.setText("E-GELADI");
 
         buttonkeluar.setText("Keluar");
 
@@ -77,16 +92,6 @@ public class MenuUtama extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buttonmhs)
-                    .addComponent(buttonpem))
-                .addGap(157, 157, 157))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(121, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -96,13 +101,21 @@ public class MenuUtama extends javax.swing.JPanel {
                         .addGap(20, 20, 20)
                         .addComponent(buttonkeluar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 160, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonpem)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonmhs, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(157, 157, 157))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(32, 32, 32)
                 .addComponent(jButtonlogin)
                 .addGap(18, 18, 18)
                 .addComponent(buttonmhs)
@@ -113,6 +126,18 @@ public class MenuUtama extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonloginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonloginActionPerformed
+
+    private void buttonmhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonmhsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonmhsActionPerformed
+
+    private void buttonpemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonpemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonpemActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
