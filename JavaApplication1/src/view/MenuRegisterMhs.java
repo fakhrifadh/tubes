@@ -72,15 +72,25 @@ public class MenuRegisterMhs extends javax.swing.JPanel {
         buttonkembali = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
-        jLabel1.setText("id :");
+        jLabel1.setText("ID :");
 
-        jLabel2.setText("nama :");
+        jLabel2.setText("Nama :");
 
-        jLabel3.setText("nomor handphone :");
+        jLabel3.setText("Nomor Handphone :");
 
-        buttondaftar.setText("daftar");
+        buttondaftar.setText("Daftar");
+        buttondaftar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttondaftarActionPerformed(evt);
+            }
+        });
 
-        buttonkembali.setText("kembali");
+        buttonkembali.setText("Kembali");
+        buttonkembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonkembaliActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("REGISTRASI MAHASISWA");
 
@@ -110,14 +120,14 @@ public class MenuRegisterMhs extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel4)))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(fieldregisid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
@@ -125,17 +135,25 @@ public class MenuRegisterMhs extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(fieldregisnama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldregishp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(fieldregishp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
                 .addComponent(buttondaftar)
                 .addGap(64, 64, 64)
                 .addComponent(buttonkembali)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttondaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttondaftarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttondaftarActionPerformed
+
+    private void buttonkembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonkembaliActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonkembaliActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
