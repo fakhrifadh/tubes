@@ -50,8 +50,13 @@ public class MenuLogin extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
 
         buttonlogin.setText("Login");
+        buttonlogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonloginActionPerformed(evt);
+            }
+        });
 
-        jLabel1.setText("masukan id : ");
+        jLabel1.setText("MASUKAN ID :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -82,6 +87,10 @@ public class MenuLogin extends javax.swing.JPanel {
                 .addContainerGap(118, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonloginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonloginActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

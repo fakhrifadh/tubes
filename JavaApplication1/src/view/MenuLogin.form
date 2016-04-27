@@ -56,10 +56,13 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Login"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonloginActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="masukan id : "/>
+        <Property name="text" type="java.lang.String" value="MASUKAN ID :"/>
       </Properties>
     </Component>
   </SubComponents>
