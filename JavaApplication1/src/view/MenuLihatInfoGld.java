@@ -50,6 +50,7 @@ public class MenuLihatInfoGld extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         listgeladi = new javax.swing.JList();
         buttonback = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,6 +63,8 @@ public class MenuLihatInfoGld extends javax.swing.JFrame {
 
         buttonback.setText("kembali");
 
+        jLabel1.setText("lokasi dan kelompok geladi saya:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -69,6 +72,7 @@ public class MenuLihatInfoGld extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonback))
                 .addContainerGap(31, Short.MAX_VALUE))
@@ -76,9 +80,11 @@ public class MenuLihatInfoGld extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(21, 21, 21)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
-                .addGap(45, 45, 45)
+                .addGap(32, 32, 32)
                 .addComponent(buttonback)
                 .addGap(25, 25, 25))
         );
@@ -93,6 +99,7 @@ public class MenuLihatInfoGld extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonback;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList listgeladi;
     // End of variables declaration//GEN-END:variables
