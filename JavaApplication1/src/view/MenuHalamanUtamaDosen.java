@@ -5,6 +5,9 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+
 /**
  *
  * @author KARINA
@@ -18,6 +21,30 @@ public class MenuHalamanUtamaDosen extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JButton getButtonadd() {
+        return buttonadd;
+    }
+
+    public JButton getButtonedit() {
+        return buttonedit;
+    }
+
+    public JButton getButtonkeluar() {
+        return buttonkeluar;
+    }
+
+    public JButton getButtonlokasi() {
+        return buttonlokasi;
+    }
+    public void addListener(ActionListener a){
+        buttonadd.addActionListener(a);
+        buttonedit.addActionListener(a);
+        buttonkeluar.addActionListener(a);
+        buttonlokasi.addActionListener(a);
+
+    }
+   
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,34 +54,34 @@ public class MenuHalamanUtamaDosen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        buttonlokasi = new javax.swing.JButton();
+        buttonadd = new javax.swing.JButton();
+        buttonedit = new javax.swing.JButton();
+        buttonkeluar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("List Lokasi Geladi");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonlokasi.setText("List Lokasi Geladi");
+        buttonlokasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                buttonlokasiActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Add Lokasi Geladi");
+        buttonadd.setText("Add Lokasi Geladi");
 
-        jButton3.setText("Edit Data Pembimbing");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        buttonedit.setText("Edit Data Pembimbing");
+        buttonedit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                buttoneditActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Log Out");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        buttonkeluar.setText("Log Out");
+        buttonkeluar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                buttonkeluarActionPerformed(evt);
             }
         });
 
@@ -69,10 +96,10 @@ public class MenuHalamanUtamaDosen extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4))
+                        .addComponent(buttonedit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonadd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonlokasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonkeluar))
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(92, Short.MAX_VALUE))
         );
@@ -82,71 +109,41 @@ public class MenuHalamanUtamaDosen extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(buttonlokasi)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(buttonadd)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(buttonedit)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(jButton4)
+                .addComponent(buttonkeluar)
                 .addGap(27, 27, 27))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void buttonlokasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonlokasiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_buttonlokasiActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void buttoneditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoneditActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_buttoneditActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void buttonkeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonkeluarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_buttonkeluarActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuHalamanUtamaDosen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuHalamanUtamaDosen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuHalamanUtamaDosen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuHalamanUtamaDosen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MenuHalamanUtamaDosen().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton buttonadd;
+    private javax.swing.JButton buttonedit;
+    private javax.swing.JButton buttonkeluar;
+    private javax.swing.JButton buttonlokasi;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

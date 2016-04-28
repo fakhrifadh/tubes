@@ -5,6 +5,9 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+
 /**
  *
  * @author KARINA
@@ -18,6 +21,38 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JButton getButtonaddkel() {
+        return buttonaddkel;
+    }
+
+    public JButton getButtonaddkuota() {
+        return buttonaddkuota;
+    }
+
+    public JButton getButtonedit() {
+        return buttonedit;
+    }
+
+    public JButton getButtoneditgeladi() {
+        return buttoneditgeladi;
+    }
+
+    public JButton getButtonkurkuota() {
+        return buttonkurkuota;
+    }
+
+    public JButton getButtonremovelokasi() {
+        return buttonremovelokasi;
+    }
+    public void addListener(ActionListener a){
+        buttonaddkuota.addActionListener(a);
+        buttonaddkel.addActionListener(a);
+        buttonedit.addActionListener(a);
+        buttoneditgeladi.addActionListener(a);
+        buttonkurkuota.addActionListener(a);
+
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,37 +63,42 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        buttonedit = new javax.swing.JButton();
+        buttonaddkuota = new javax.swing.JButton();
+        buttonkurkuota = new javax.swing.JButton();
+        buttonaddkel = new javax.swing.JButton();
+        buttoneditgeladi = new javax.swing.JButton();
+        buttonremovelokasi = new javax.swing.JButton();
+        buttonback = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Detail Geladi");
 
-        jButton1.setText("Edit Info Geladi");
+        buttonedit.setText("Edit Info Geladi");
 
-        jButton2.setText("Tambah Kuota Geladi");
-
-        jButton3.setText("Kurangi Kuota Geladi");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        buttonaddkuota.setText("Tambah Kuota Geladi");
+        buttonaddkuota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                buttonaddkuotaActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Tambah Kelompok");
+        buttonkurkuota.setText("Kurangi Kuota Geladi");
+        buttonkurkuota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonkurkuotaActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("Edit Kelompok Geladi");
+        buttonaddkel.setText("Tambah Kelompok");
 
-        jButton6.setText("Remove Lokasi Geladi");
+        buttoneditgeladi.setText("Edit Kelompok Geladi");
 
-        jButton7.setText("Kembali");
+        buttonremovelokasi.setText("Remove Lokasi Geladi");
+
+        buttonback.setText("Kembali");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,14 +107,14 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(buttonedit, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonaddkuota)
+                    .addComponent(buttonkurkuota, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6))
+                    .addComponent(buttoneditgeladi, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonaddkel, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonremovelokasi))
                 .addGap(42, 42, 42))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -82,7 +122,7 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
                 .addGap(131, 131, 131))
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jButton7)
+                .addComponent(buttonback)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -92,71 +132,45 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton1))
+                    .addComponent(buttonaddkel)
+                    .addComponent(buttonedit))
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton2))
+                    .addComponent(buttoneditgeladi)
+                    .addComponent(buttonaddkuota))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6)
-                    .addComponent(jButton3))
+                    .addComponent(buttonremovelokasi)
+                    .addComponent(buttonkurkuota))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(jButton7)
+                .addComponent(buttonback)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void buttonkurkuotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonkurkuotaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_buttonkurkuotaActionPerformed
+
+    private void buttonaddkuotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonaddkuotaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonaddkuotaActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuDetailLokasiGld.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuDetailLokasiGld.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuDetailLokasiGld.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuDetailLokasiGld.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MenuDetailLokasiGld().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton buttonaddkel;
+    private javax.swing.JButton buttonaddkuota;
+    private javax.swing.JButton buttonback;
+    private javax.swing.JButton buttonedit;
+    private javax.swing.JButton buttoneditgeladi;
+    private javax.swing.JButton buttonkurkuota;
+    private javax.swing.JButton buttonremovelokasi;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

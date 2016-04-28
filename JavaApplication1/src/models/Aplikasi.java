@@ -43,6 +43,24 @@ public class Aplikasi {
         
         return this.idUniqueGenerator;
     }
+
+    public Collection<Pembimbing> getListPembimbing() {
+        return listPembimbing;
+    }
+
+    public Collection<Mahasiswa> getListMahasiswa() {
+        return listMahasiswa;
+    }
+
+    public Collection<LokasiGladi> getListLokasiGladi() {
+        return listLokasiGladi;
+    }
+
+    public Collection<Kelompok> getListKelompok() {
+        return listKelompok;
+    }
+    
+   
     
     private void resetMenu() {
         this.menuChoice = 0;
@@ -97,27 +115,27 @@ public class Aplikasi {
         }
     }
     
-    private Orang findOrangByNoId(String noId) throws NoSuchElementException {
+    public Orang findOrangByNoId(String noId) throws NoSuchElementException {
         return Stream.concat(this.listMahasiswa.stream(), this.listPembimbing.stream())
                 .filter(o -> o.getNoId().equalsIgnoreCase(noId))
                 .findFirst()
                 .get();
     }
     
-    private Mahasiswa findMahasiswaByNoId(String noId) {
+    public Mahasiswa findMahasiswaByNoId(String noId) {
         return this.listMahasiswa.stream()
                 .filter(m -> m.getNoId().equalsIgnoreCase(noId))
                 .findFirst()
                 .get();
     }
     
-    private Collection<Mahasiswa> findMahasiswaByKelompokId(int kelId) {
+    public Collection<Mahasiswa> findMahasiswaByKelompokId(int kelId) {
         return this.listMahasiswa.stream()
                 .filter(m -> m.getIdKelompok() == kelId)
                 .collect(Collectors.toList());
     }
     
-    private Collection<Mahasiswa> findMahasiswaByGladiId(int gladiId){
+    public Collection<Mahasiswa> findMahasiswaByGladiId(int gladiId){
         return this.listMahasiswa.stream()
                 .filter(m -> m.getLokasi() == gladiId)
                 .collect(Collectors.toList());

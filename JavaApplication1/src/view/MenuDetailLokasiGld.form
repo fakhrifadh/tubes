@@ -26,15 +26,15 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButton1" min="-2" pref="133" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton3" min="-2" pref="133" max="-2" attributes="0"/>
+                  <Component id="buttonedit" min="-2" pref="133" max="-2" attributes="0"/>
+                  <Component id="buttonaddkuota" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonkurkuota" min="-2" pref="133" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="58" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButton5" min="-2" pref="135" max="-2" attributes="0"/>
-                  <Component id="jButton4" min="-2" pref="135" max="-2" attributes="0"/>
-                  <Component id="jButton6" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttoneditgeladi" min="-2" pref="135" max="-2" attributes="0"/>
+                  <Component id="buttonaddkel" min="-2" pref="135" max="-2" attributes="0"/>
+                  <Component id="buttonremovelokasi" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
           </Group>
@@ -45,7 +45,7 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-              <Component id="jButton7" min="-2" max="-2" attributes="0"/>
+              <Component id="buttonback" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -57,21 +57,21 @@
               <Component id="jLabel1" min="-2" pref="41" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonaddkel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonedit" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttoneditgeladi" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonaddkuota" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonremovelokasi" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonkurkuota" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="30" max="32767" attributes="0"/>
-              <Component id="jButton7" min="-2" max="-2" attributes="0"/>
+              <Component id="buttonback" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -86,40 +86,43 @@
         <Property name="text" type="java.lang.String" value="Detail Geladi"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="buttonedit">
       <Properties>
         <Property name="text" type="java.lang.String" value="Edit Info Geladi"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="buttonaddkuota">
       <Properties>
         <Property name="text" type="java.lang.String" value="Tambah Kuota Geladi"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonaddkuotaActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="buttonkurkuota">
       <Properties>
         <Property name="text" type="java.lang.String" value="Kurangi Kuota Geladi"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonkurkuotaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
+    <Component class="javax.swing.JButton" name="buttonaddkel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Tambah Kelompok"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="buttoneditgeladi">
       <Properties>
         <Property name="text" type="java.lang.String" value="Edit Kelompok Geladi"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton6">
+    <Component class="javax.swing.JButton" name="buttonremovelokasi">
       <Properties>
         <Property name="text" type="java.lang.String" value="Remove Lokasi Geladi"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton7">
+    <Component class="javax.swing.JButton" name="buttonback">
       <Properties>
         <Property name="text" type="java.lang.String" value="Kembali"/>
       </Properties>
