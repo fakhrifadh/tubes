@@ -22,19 +22,41 @@ import models.Aplikasi;
  */
 class ControllerMenuPilihGeladi implements ActionListener {
     Aplikasi model;
+    String nim;
     MenuPilihGeladi menupilihgeladi;
     
-    public ControllerMenuPilihGeladi(Aplikasi model) {
+    public ControllerMenuPilihGeladi(Aplikasi model,String nim) {
         this.model = model;
+        this.nim = nim;
         menupilihgeladi = new MenuPilihGeladi();
         menupilihgeladi.addListener(this);
         menupilihgeladi.setVisible(true);
-        menupilihgeladi.getListlokasi().setListData(model.getdaftarlokasi());
+        menupilihgeladi.getListlokasi().setListData(model.getdaftarlokasi2());
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Object source = e.getSource();
+       
+        if (source.equals(menupilihgeladi.getButtonback())) {
+            menupilihgeladi.dispose();
+            new ControllerMenuHalamanUtamaMhs(model,nim);
+        }
+        if (source.equals(menupilihgeladi.getButtoninp())) {
+            if (model.findMahasiswaByNoId(nim).getLokasi() < 1){
+                int id = Integer.parseInt(menupilihgeladi.getFieldnoid().getText());
+                model.addGeladiToMahasiswa(nim, id);
+                model.addKelompokToMahasiswa(nim, id);
+                JOptionPane.showMessageDialog(null, "berhasil ditambahkan");
+                menupilihgeladi.dispose();
+                new ControllerMenuHalamanUtamaMhs(model, nim);
+            }
+            else{
+               JOptionPane.showMessageDialog(null, "gagal ditambahkan. anda sudah memiliki lokasi geladi"); 
+            }
+        }
+        
+         
     }
     
 }

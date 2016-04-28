@@ -21,8 +21,8 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JButton getButtonaddkel() {
-        return buttonaddkel;
+    public JButton getButtonliat() {
+        return buttonliat;
     }
 
     public JButton getButtonaddkuota() {
@@ -33,8 +33,8 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
         return buttonedit;
     }
 
-    public JButton getButtoneditgeladi() {
-        return buttoneditgeladi;
+    public JButton getButtontambah() {
+        return buttonadd;
     }
 
     public JButton getButtonkurkuota() {
@@ -46,9 +46,9 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
     }
     public void addListener(ActionListener a){
         buttonaddkuota.addActionListener(a);
-        buttonaddkel.addActionListener(a);
+        buttonliat.addActionListener(a);
         buttonedit.addActionListener(a);
-        buttoneditgeladi.addActionListener(a);
+        buttonadd.addActionListener(a);
         buttonkurkuota.addActionListener(a);
 
     }
@@ -66,8 +66,8 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
         buttonedit = new javax.swing.JButton();
         buttonaddkuota = new javax.swing.JButton();
         buttonkurkuota = new javax.swing.JButton();
-        buttonaddkel = new javax.swing.JButton();
-        buttoneditgeladi = new javax.swing.JButton();
+        buttonliat = new javax.swing.JButton();
+        buttonadd = new javax.swing.JButton();
         buttonremovelokasi = new javax.swing.JButton();
         buttonback = new javax.swing.JButton();
 
@@ -92,9 +92,9 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
             }
         });
 
-        buttonaddkel.setText("Tambah Kelompok");
+        buttonliat.setText("Lihat Peserta");
 
-        buttoneditgeladi.setText("Edit Kelompok Geladi");
+        buttonadd.setText("Tambahkan Saya");
 
         buttonremovelokasi.setText("Remove Lokasi Geladi");
 
@@ -112,8 +112,8 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
                     .addComponent(buttonkurkuota, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buttoneditgeladi, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonaddkel, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonadd, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonliat, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonremovelokasi))
                 .addGap(42, 42, 42))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -132,11 +132,11 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonaddkel)
+                    .addComponent(buttonliat)
                     .addComponent(buttonedit))
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttoneditgeladi)
+                    .addComponent(buttonadd)
                     .addComponent(buttonaddkuota))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -164,12 +164,12 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonaddkel;
+    private javax.swing.JButton buttonadd;
     private javax.swing.JButton buttonaddkuota;
     private javax.swing.JButton buttonback;
     private javax.swing.JButton buttonedit;
-    private javax.swing.JButton buttoneditgeladi;
     private javax.swing.JButton buttonkurkuota;
+    private javax.swing.JButton buttonliat;
     private javax.swing.JButton buttonremovelokasi;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

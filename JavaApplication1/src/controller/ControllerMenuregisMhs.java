@@ -55,9 +55,9 @@ public class ControllerMenuregisMhs implements ActionListener {
                 String id = menuregismhs.getFieldregisid().getText();
                 String nama = menuregismhs.getFieldregisnama().getText();
                 String hp = menuregismhs.getFieldregishp().getText();
-                p = new Mahasiswa(id,nama,hp);
+                p = new Mahasiswa(nama,id,hp);
                 model.getListMahasiswa().add(p);
-                JOptionPane.showMessageDialog(null, "Pembimbing Berhasil Ditambahs");
+                JOptionPane.showMessageDialog(null, "mahasiswa Berhasil Ditambah");
             }
                 
                 

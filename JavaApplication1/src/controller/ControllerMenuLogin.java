@@ -59,7 +59,7 @@ public class ControllerMenuLogin implements ActionListener {
             }
             else{
                 menulogin.dispose();
-                new ControllerMenuHalamanUtamaMhs(model);
+                new ControllerMenuHalamanUtamaMhs(model, id);
             }
              
          }

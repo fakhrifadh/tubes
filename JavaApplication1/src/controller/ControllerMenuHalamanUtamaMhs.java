@@ -21,10 +21,12 @@ import javax.swing.JOptionPane;
  */
 public class ControllerMenuHalamanUtamaMhs implements ActionListener{
     Aplikasi model;
+    String nim;
     MenuHalamanUtamaMhs MHUmhs;
 
-    public ControllerMenuHalamanUtamaMhs(Aplikasi model) {
+    public ControllerMenuHalamanUtamaMhs(Aplikasi model, String id) {
         this.model = model;
+        nim = id;
         MHUmhs = new MenuHalamanUtamaMhs();
         MHUmhs.addListener(this);
         MHUmhs.setVisible(true);
@@ -42,12 +44,12 @@ public class ControllerMenuHalamanUtamaMhs implements ActionListener{
         }
         if (source.equals(MHUmhs.getButtonliat())){
             MHUmhs.dispose();
-            new ControllerMenuLihatInfoGld(model);
+            new ControllerMenuLihatInfoGld(model,nim);
             
         }
         if (source.equals(MHUmhs.getButtonpilih())){
             MHUmhs.dispose();
-            new ControllerMenuPilihGeladi(model);
+            new ControllerMenuPilihGeladi(model,nim);
             
         }
         

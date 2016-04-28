@@ -29,5 +29,14 @@ public class Kelompok {
     public int getIdLokasiGladi() {
         return idLokasiGladi;
     }
+
+    public void setIdKelompok(int idKelompok) {
+        this.idKelompok = idKelompok;
+    }
+
+    public void setIdLokasiGladi(int idLokasiGladi) {
+        this.idLokasiGladi = idLokasiGladi;
+    }
+    
 }
 

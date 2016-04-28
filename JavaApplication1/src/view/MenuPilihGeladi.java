@@ -9,6 +9,7 @@ package view;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JList;
+import javax.swing.JTextField;
 
 /**
  *
@@ -30,6 +31,11 @@ public class MenuPilihGeladi extends javax.swing.JFrame {
     public JButton getButtoninp() {
         return buttoninp;
     }
+
+    public JTextField getFieldnoid() {
+        return fieldnoid;
+    }
+    
 
     public JList getListlokasi() {
         return listlokasi;

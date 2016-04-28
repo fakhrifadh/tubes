@@ -96,7 +96,7 @@ public class Aplikasi {
 
     }
     
-    private Collection<Kelompok> getKelompokByGeladi(int geladiId) {
+    public Collection<Kelompok> getKelompokByGeladi(int geladiId) {
         return this.listKelompok.stream()
                 .filter(k -> k.getIdLokasiGladi() == geladiId)
                 .collect(Collectors.toList());
@@ -111,8 +111,19 @@ public class Aplikasi {
     }
         return s;
 }
+        public Object[] getdaftarlokasi2(){
+        int i = 0;
+        String[] s = new String[100];
+        for(LokasiGladi l:listLokasiGladi){
+            if(l.getKuota() > 0 ){
+            s[i] = "id: "+l.getId()+" || nama: "+l.getNama()+" || lokasi: "+l.getKota()+" || kuota: "+l.getKuota();
+            i++;
+            }
+    }
+        return s;
+}
     
-    private void listInfoGeladi() {
+    public void listInfoGeladi() {
         if (this.listLokasiGladi.size() < 1) {
             System.out.println("Tidak ada lokasi geladi saat ini");
         } else {
@@ -139,6 +150,23 @@ public class Aplikasi {
                 .findFirst()
                 .get();
     }
+    public LokasiGladi findgeladibyid (int noId) {
+        for(LokasiGladi l:listLokasiGladi){
+            if(l.getId() == noId){
+                return l;
+            }
+        }
+        return null;
+    }
+        public Kelompok findkelompokbyid (int noId) {
+        for(Kelompok l:listKelompok){
+            if(l.getIdKelompok() == noId){
+                return l;
+            }
+        }
+        return null;
+    }
+    
     
     public Collection<Mahasiswa> findMahasiswaByKelompokId(int kelId) {
         return this.listMahasiswa.stream()
@@ -151,17 +179,19 @@ public class Aplikasi {
                 .filter(m -> m.getLokasi() == gladiId)
                 .collect(Collectors.toList());
     }
-    private void addGeladiToMahasiswa(String nim, int id) {
+    public void addGeladiToMahasiswa(String nim, int id) {
         this.listMahasiswa = this.listMahasiswa.stream().map((Mahasiswa m) -> {
             if (m.getNoId().equalsIgnoreCase(nim)){
                 m.setLokasi(id);
+                findgeladibyid(id).setKuota(findgeladibyid(id).getKuota()-1);
+                
             }
             
             return m;
         }).collect(Collectors.toList());
     }
     
-    private void addKelompokToMahasiswa(String nim, int id) {
+    public void addKelompokToMahasiswa(String nim, int id) {
        this.listMahasiswa = this.listMahasiswa.stream().map((Mahasiswa m) -> {
             if (m.getNoId().equalsIgnoreCase(nim)){
                 m.setIdKelompok(id);
@@ -189,11 +219,24 @@ public class Aplikasi {
         }
     }
     
-    private LokasiGladi getGeladi(int id) {
+    public LokasiGladi getGeladi(int id) {
        return this.listLokasiGladi.stream()
                 .filter(g -> g.getId() == id)
                 .findFirst()
                 .get();
+    }
+    public Object[] listgeladisayamhs(String id){
+        LokasiGladi g = this.getGeladi(this.findMahasiswaByNoId(id).getLokasi());
+        int i =0;
+        String[] a = new String[100];
+        for(Mahasiswa m:listMahasiswa){
+            if(m.getLokasi()==g.getId()){
+                a[i] =  g.getKota()+" "+g.getNama()+" ||"+m.getJabatan()+"   "+m.getNama();
+                i++;
+                
+            } 
+    }
+        return a;
     }
     
     private void logout() {
