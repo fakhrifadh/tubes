@@ -5,11 +5,52 @@
  */
 
 package controller;
+import java.awt.event.ActionListener;
+import models.Aplikasi;
+import view.MenuHalamanUtamaMhs;
+import java.awt.event.ActionEvent;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author JOKER
  */
-public class ControllerMenuHalamanUtamaMhs {
+public class ControllerMenuHalamanUtamaMhs implements ActionListener{
+    Aplikasi model;
+    MenuHalamanUtamaMhs MHUmhs;
+
+    public ControllerMenuHalamanUtamaMhs(Aplikasi model) {
+        this.model = model;
+        MHUmhs = new MenuHalamanUtamaMhs();
+        MHUmhs.addListener(this);
+        MHUmhs.setVisible(true);
+    }
+    
+    
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        Object source = e.getSource();
+        if (source.equals(MHUmhs.getButtonkeluar())){
+            MHUmhs.dispose();
+            new ControllerMenuUtamaGladi(model);
+            
+        }
+        if (source.equals(MHUmhs.getButtonliat())){
+            MHUmhs.dispose();
+            new ControllerMenuLihatInfoGld(model);
+            
+        }
+        if (source.equals(MHUmhs.getButtonpilih())){
+            MHUmhs.dispose();
+            new ControllerMenuPilihGeladi(model);
+            
+        }
+        
+    }
     
 }

@@ -8,6 +8,7 @@ package view;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JList;
+import javax.swing.JTextField;
 
 /**
  *
@@ -29,10 +30,21 @@ public class MenuListLokasiGld extends javax.swing.JFrame {
     public JList getListlokasi() {
         return listlokasi;
     }
+
+    public JButton getButtonliat() {
+        return buttonliat;
+    }
+
+    public JTextField getFieldid() {
+        return fieldid;
+    }
+    
     public void addListener(ActionListener a){
         buttonback.addActionListener(a);
-
+        fieldid.addActionListener(a);
+        buttonliat.addActionListener(a);
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -47,6 +59,9 @@ public class MenuListLokasiGld extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         listlokasi = new javax.swing.JList();
         buttonback = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        fieldid = new javax.swing.JTextField();
+        buttonliat = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,16 +76,26 @@ public class MenuListLokasiGld extends javax.swing.JFrame {
 
         buttonback.setText("kembali");
 
+        jLabel2.setText("masukan no id geladi untuk masuk menu lokasi geladi");
+
+        buttonliat.setText("lihat");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buttonback)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(buttonback)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(buttonliat))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldid, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -80,9 +105,15 @@ public class MenuListLokasiGld extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                .addComponent(buttonback)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fieldid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonliat)
+                    .addComponent(buttonback))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
@@ -95,7 +126,10 @@ public class MenuListLokasiGld extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonback;
+    private javax.swing.JButton buttonliat;
+    private javax.swing.JTextField fieldid;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList listlokasi;
     // End of variables declaration//GEN-END:variables

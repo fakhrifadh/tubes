@@ -33,6 +33,23 @@ public class ControllerMenuHalamanUtamaDosen implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        Object source = e.getSource();
+        if (source.equals(MHUdosen.getButtonkeluar())){
+            MHUdosen.dispose();
+            new ControllerMenuUtamaGladi(model);
+            
+        }
+        if (source.equals(MHUdosen.getButtonadd())){
+            MHUdosen.dispose();
+            new ControllerMenuTambahLokasi(model);
+            
+        }
+        if (source.equals(MHUdosen.getButtonlokasi())){
+            MHUdosen.dispose();
+            new ControllerMenuListLokasiGld(model);
+            
+        }
+        
 
     }
     

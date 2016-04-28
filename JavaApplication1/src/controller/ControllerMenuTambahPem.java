@@ -46,11 +46,12 @@ public class ControllerMenuTambahPem implements ActionListener {
             else if (menutambahpem.getFieldregishp().getText().equals("")){
                 JOptionPane.showMessageDialog(null, "Maaf no hp harus diisi");
             }
+        
             else{
                 String id = menutambahpem.getFieldregisid().getText();
                 String nama = menutambahpem.getFieldregisnama().getText();
                 String hp = menutambahpem.getFieldregishp().getText();
-                Pembimbing p = new Pembimbing(id,nama,hp);
+                Pembimbing p = new Pembimbing(nama,id,hp);
                 model.getListPembimbing().add(p);
                 JOptionPane.showMessageDialog(null, "Pembimbing Berhasil Ditambah");
                 menutambahpem.dispose();
@@ -58,10 +59,7 @@ public class ControllerMenuTambahPem implements ActionListener {
                 
             }
                 
-                
-                
-            }
-        
+        }       
         
     }
     

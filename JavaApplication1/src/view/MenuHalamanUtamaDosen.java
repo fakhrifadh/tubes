@@ -25,9 +25,7 @@ public class MenuHalamanUtamaDosen extends javax.swing.JFrame {
         return buttonadd;
     }
 
-    public JButton getButtonedit() {
-        return buttonedit;
-    }
+   
 
     public JButton getButtonkeluar() {
         return buttonkeluar;
@@ -38,7 +36,6 @@ public class MenuHalamanUtamaDosen extends javax.swing.JFrame {
     }
     public void addListener(ActionListener a){
         buttonadd.addActionListener(a);
-        buttonedit.addActionListener(a);
         buttonkeluar.addActionListener(a);
         buttonlokasi.addActionListener(a);
 
@@ -56,7 +53,6 @@ public class MenuHalamanUtamaDosen extends javax.swing.JFrame {
 
         buttonlokasi = new javax.swing.JButton();
         buttonadd = new javax.swing.JButton();
-        buttonedit = new javax.swing.JButton();
         buttonkeluar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -71,13 +67,6 @@ public class MenuHalamanUtamaDosen extends javax.swing.JFrame {
 
         buttonadd.setText("Add Lokasi Geladi");
 
-        buttonedit.setText("Edit Data Pembimbing");
-        buttonedit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttoneditActionPerformed(evt);
-            }
-        });
-
         buttonkeluar.setText("Log Out");
         buttonkeluar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +75,7 @@ public class MenuHalamanUtamaDosen extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Halaman Utama Dosen");
+        jLabel1.setText("Halaman Utama Pembimbing");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -94,29 +83,32 @@ public class MenuHalamanUtamaDosen extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(buttonedit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(buttonadd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(buttonlokasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(buttonkeluar))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(buttonlokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                        .addComponent(buttonadd, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(40, 40, 40))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(buttonkeluar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(43, 43, 43)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(buttonlokasi)
-                .addGap(18, 18, 18)
-                .addComponent(buttonadd)
-                .addGap(18, 18, 18)
-                .addComponent(buttonedit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonlokasi)
+                    .addComponent(buttonadd))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
                 .addComponent(buttonkeluar)
-                .addGap(27, 27, 27))
+                .addContainerGap())
         );
 
         pack();
@@ -125,10 +117,6 @@ public class MenuHalamanUtamaDosen extends javax.swing.JFrame {
     private void buttonlokasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonlokasiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_buttonlokasiActionPerformed
-
-    private void buttoneditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoneditActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttoneditActionPerformed
 
     private void buttonkeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonkeluarActionPerformed
         // TODO add your handling code here:
@@ -141,7 +129,6 @@ public class MenuHalamanUtamaDosen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonadd;
-    private javax.swing.JButton buttonedit;
     private javax.swing.JButton buttonkeluar;
     private javax.swing.JButton buttonlokasi;
     private javax.swing.JLabel jLabel1;

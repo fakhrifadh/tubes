@@ -43,9 +43,10 @@ public class ControllerMenuLogin implements ActionListener {
         }
          if (source.equals(menulogin.getButtonlogin())) {
              
+            
             try {
             user = model.findOrangByNoId(id);
-            new ControllerMenuUtamaGladi(model);
+            
             
            
             } catch (NoSuchElementException n) {
@@ -58,7 +59,7 @@ public class ControllerMenuLogin implements ActionListener {
             }
             else{
                 menulogin.dispose();
-                new ControllerMenuHalamanUtamaMhs();
+                new ControllerMenuHalamanUtamaMhs(model);
             }
              
          }

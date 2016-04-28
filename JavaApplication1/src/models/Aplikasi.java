@@ -102,6 +102,16 @@ public class Aplikasi {
                 .collect(Collectors.toList());
     }
     
+    public Object[] getdaftarlokasi(){
+        int i = 0;
+        String[] s = new String[100];
+        for(LokasiGladi l:listLokasiGladi){
+            s[i] = "id: "+l.getId()+" || nama: "+l.getNama()+" || lokasi: "+l.getKota()+" || kuota: "+l.getKuota();
+            i++;
+    }
+        return s;
+}
+    
     private void listInfoGeladi() {
         if (this.listLokasiGladi.size() < 1) {
             System.out.println("Tidak ada lokasi geladi saat ini");
@@ -111,6 +121,7 @@ public class Aplikasi {
                 System.out.println("kuota: "+g.getKuota());
                 System.out.println("Nama :"+ g.getNama());
                 System.out.println("No ID: "+g.getId());
+                System.out.println("========================");
             });
         }
     }
@@ -217,7 +228,7 @@ public class Aplikasi {
         int result = g.getKuota() - n;
         
         if (result < howMany) {
-            System.out.println("kuota baru tidak baluh kurang dari banyak mahasiswa");
+            System.out.println("kuota baru tidak boleh kurang dari banyak mahasiswa");
         } else {
             this.listLokasiGladi = this.listLokasiGladi.stream()
                 .map((LokasiGladi glad) -> {
@@ -252,7 +263,7 @@ public class Aplikasi {
         });
     }
     
-    private void addGeladi(String nama, String lokasi, int kuota) {
+    public void addGeladi(String nama, String lokasi, int kuota) {
         LokasiGladi newLokasi = new LokasiGladi(lokasi, this.generateId(), kuota, nama);
         this.listLokasiGladi.add(newLokasi);
     }
@@ -268,6 +279,8 @@ public class Aplikasi {
                     return p;
                 }).collect(Collectors.toList());
     }
+    
+   
     
     public void mainMenu() {
         while (true) {
@@ -405,7 +418,7 @@ public class Aplikasi {
             case 1:
                 System.out.println("masukkan nama baru:("+gladi.getNama()+")");
                 String namaBar = reader.next();
-                System.out.println("masukkan lokasi bary:("+gladi.getKota()+")");
+                System.out.println("masukkan lokasi baru:("+gladi.getKota()+")");
                 String lokasiBar = reader.next();
                 this.updateInfoGladi(gladi.getId(), namaBar, lokasiBar);
                 System.out.println("lokasi updated....");
