@@ -122,6 +122,7 @@ public class Aplikasi {
     }
         return s;
 }
+        
     
     public void listInfoGeladi() {
         if (this.listLokasiGladi.size() < 1) {
@@ -190,6 +191,17 @@ public class Aplikasi {
             return m;
         }).collect(Collectors.toList());
     }
+    public void addGeladiToPembimbing(String id, int idlok) {
+        this.listPembimbing = this.listPembimbing.stream().map((Pembimbing m) -> {
+            if (m.getNoId().equalsIgnoreCase(id)){
+                m.setLokasi(idlok);
+                
+            }
+            
+            return m;
+        }).collect(Collectors.toList());
+    }
+    
     
     public void addKelompokToMahasiswa(String nim, int id) {
        this.listMahasiswa = this.listMahasiswa.stream().map((Mahasiswa m) -> {
@@ -238,6 +250,28 @@ public class Aplikasi {
     }
         return a;
     }
+    public Object[] listpesertamhs(int idlok){
+        int i=0;
+        String[] a = new String[100];
+        for(Mahasiswa m:listMahasiswa){
+            if(m.getLokasi()==idlok){
+                a[i] = m.getNoId()+"  "+m.getNama()+"  "+m.getNohp();
+                i++;
+            }
+        }
+        return a;
+    }
+    public Object[] listpesertapem(int idlok){
+        int i=0;
+        String[] a = new String[100];
+        for(Pembimbing m:listPembimbing){
+            if(m.getLokasi()==idlok){
+                a[i] = m.getNoId()+"  "+m.getNama()+"  "+m.getNohp();
+                i++;
+            }
+        }
+        return a;
+    }
     
     private void logout() {
         this.loggedInUser = null;
@@ -255,7 +289,7 @@ public class Aplikasi {
                 }).collect(Collectors.toList());
     }
     
-    private void addKuotaGladi(int id, int n){
+    public void addKuotaGladi(int id, int n){
         this.listLokasiGladi = this.listLokasiGladi.stream()
                 .map((LokasiGladi g) -> {
                     if (g.getId() == id) {
@@ -288,7 +322,7 @@ public class Aplikasi {
         this.listKelompok.add(new Kelompok(gladiId, this.generateId()));
     }
     
-    private void removeGladi(int gladiId) {
+    public void removeGladi(int gladiId) {
         this.listLokasiGladi.removeIf(g -> g.getId() == gladiId);
         
         Collection<Kelompok> kelompok = this.getKelompokByGeladi(gladiId);
@@ -296,14 +330,29 @@ public class Aplikasi {
             this.listKelompok.removeIf(kel -> kel.getIdKelompok() == k.getIdKelompok());
             this.listMahasiswa = this.listMahasiswa.stream()
                     .map((Mahasiswa m) -> {
-                        if (m.getIdKelompok() == k.getIdKelompok()) {
+                        if (m.getLokasi()== gladiId) {
                             m.setIdKelompok(0);
-                            m.setLokasi(gladiId);
+                            m.setLokasi(0);
                         }
                         
                         return m;
                     }).collect(Collectors.toList());
         });
+    }
+    public void hapusgeladi (int id){
+        this.listLokasiGladi.remove(findgeladibyid(id));
+        this.listKelompok.remove(findkelompokbyid(id));
+        for(Mahasiswa m:listMahasiswa){
+            if(m.getLokasi()==id){
+                m.setLokasi(0);
+            }
+        }
+        for(Pembimbing m:listPembimbing){
+            if(m.getLokasi()==id){
+                m.setLokasi(0);
+            }
+        }
+        
     }
     
     public void addGeladi(String nama, String lokasi, int kuota) {
@@ -508,5 +557,6 @@ public class Aplikasi {
         }
     }
 }
+    
     
 

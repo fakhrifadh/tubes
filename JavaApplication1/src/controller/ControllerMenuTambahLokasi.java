@@ -21,9 +21,11 @@ import models.LokasiGladi;
 public class ControllerMenuTambahLokasi implements ActionListener{
     Aplikasi model;
     MenuTambahLokasi menutambahlokasi;
+    String id;
 
-    public ControllerMenuTambahLokasi(Aplikasi model) {
+    public ControllerMenuTambahLokasi(Aplikasi model, String id) {
         this.model = model;
+        this.id = id;
         menutambahlokasi = new MenuTambahLokasi();
         menutambahlokasi.addListener(this);
         menutambahlokasi.setVisible(true);
@@ -35,7 +37,7 @@ public class ControllerMenuTambahLokasi implements ActionListener{
        
         if (source.equals(menutambahlokasi.getButtonkembali())) {
             menutambahlokasi.dispose();
-            new ControllerMenuHalamanUtamaDosen(model);
+            new ControllerMenuHalamanUtamaDosen(model,id);
         }
          
          if (source.equals(menutambahlokasi.getButtondaftar())){

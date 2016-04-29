@@ -17,9 +17,11 @@ import java.awt.event.ActionListener;
 public class ControllerMenuListLokasiGld implements ActionListener {
     Aplikasi model;
     MenuListLokasiGld MLlokasigld;
+    String id;
 
-    public ControllerMenuListLokasiGld(Aplikasi model) {
+    public ControllerMenuListLokasiGld(Aplikasi model, String id) {
         this.model = model;
+        this.id = id;
         MLlokasigld = new MenuListLokasiGld();
         MLlokasigld.addListener(this);
         MLlokasigld.setVisible(true);
@@ -33,12 +35,12 @@ public class ControllerMenuListLokasiGld implements ActionListener {
        
         if (source.equals(MLlokasigld.getButtonback())) {
             MLlokasigld.dispose();
-            new ControllerMenuHalamanUtamaDosen(model);
+            new ControllerMenuHalamanUtamaDosen(model,id);
         }
         if (source.equals(MLlokasigld.getButtonliat())) {
-            String id = MLlokasigld.getFieldid().getText();
+            int idlok = Integer.parseInt(MLlokasigld.getFieldid().getText());
             MLlokasigld.dispose();
-            new ControllerMenuDetailLokasiGld(model,id);
+            new ControllerMenuDetailLokasiGld(model,id,idlok);
         }
         
     }

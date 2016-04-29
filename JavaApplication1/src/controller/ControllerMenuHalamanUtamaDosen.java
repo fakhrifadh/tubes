@@ -22,9 +22,11 @@ import javax.swing.JOptionPane;
 public class ControllerMenuHalamanUtamaDosen implements ActionListener {
     Aplikasi model;
     MenuHalamanUtamaDosen MHUdosen;
+    String id;
 
-    public ControllerMenuHalamanUtamaDosen(Aplikasi model) {
+    public ControllerMenuHalamanUtamaDosen(Aplikasi model,String id) {
         this.model = model;
+        this.id = id;
         MHUdosen = new MenuHalamanUtamaDosen();
         MHUdosen.addListener(this);
         MHUdosen.setVisible(true);
@@ -41,12 +43,12 @@ public class ControllerMenuHalamanUtamaDosen implements ActionListener {
         }
         if (source.equals(MHUdosen.getButtonadd())){
             MHUdosen.dispose();
-            new ControllerMenuTambahLokasi(model);
+            new ControllerMenuTambahLokasi(model,id);
             
         }
         if (source.equals(MHUdosen.getButtonlokasi())){
             MHUdosen.dispose();
-            new ControllerMenuListLokasiGld(model);
+            new ControllerMenuListLokasiGld(model,id);
             
         }
         

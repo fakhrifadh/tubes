@@ -55,7 +55,7 @@ public class ControllerMenuLogin implements ActionListener {
         }
               if (user.getJabatan().equalsIgnoreCase("pembimbing")){
                 menulogin.dispose();
-                new ControllerMenuHalamanUtamaDosen(model);
+                new ControllerMenuHalamanUtamaDosen(model,id);
             }
             else{
                 menulogin.dispose();

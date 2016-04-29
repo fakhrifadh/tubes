@@ -33,10 +33,6 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
         return buttonedit;
     }
 
-    public JButton getButtontambah() {
-        return buttonadd;
-    }
-
     public JButton getButtonkurkuota() {
         return buttonkurkuota;
     }
@@ -44,12 +40,24 @@ public class MenuDetailLokasiGld extends javax.swing.JFrame {
     public JButton getButtonremovelokasi() {
         return buttonremovelokasi;
     }
+
+    public JButton getButtonadd() {
+        return buttonadd;
+    }
+
+    public JButton getButtonback() {
+        return buttonback;
+    }
+    
     public void addListener(ActionListener a){
         buttonaddkuota.addActionListener(a);
         buttonliat.addActionListener(a);
         buttonedit.addActionListener(a);
         buttonadd.addActionListener(a);
         buttonkurkuota.addActionListener(a);
+        buttonback.addActionListener(a);
+        buttonadd.addActionListener(a);
+        buttonremovelokasi.addActionListener(a);
 
     }
 

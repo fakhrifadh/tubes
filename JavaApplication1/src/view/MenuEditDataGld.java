@@ -33,10 +33,16 @@ public class MenuEditDataGld extends javax.swing.JFrame {
     public JTextField getFieldnamabaru() {
         return fieldnamabaru;
     }
+
+    public JTextField getFieldlokasibaru() {
+        return fieldlokasibaru;
+    }
+    
     public void addListener(ActionListener a){
         buttonback.addActionListener(a);
         buttonselesai.addActionListener(a);
         fieldnamabaru.addActionListener(a);
+        fieldlokasibaru.addActionListener(a);
 
     }
 
