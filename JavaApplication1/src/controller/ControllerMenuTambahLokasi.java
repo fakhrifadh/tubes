@@ -54,7 +54,7 @@ public class ControllerMenuTambahLokasi implements ActionListener{
             else{
              String nama = menutambahlokasi.getFieldnama().getText();
              int kuota = Integer.parseInt(menutambahlokasi.getFieldkuota().getText());
-             String lokasi = menutambahlokasi.getFieldnama().getText();
+             String lokasi = menutambahlokasi.getFieldlokasi().getText();
              model.addGeladi(nama, lokasi, kuota);
              JOptionPane.showMessageDialog(null, "Geladi berhasil ditambah");
              
