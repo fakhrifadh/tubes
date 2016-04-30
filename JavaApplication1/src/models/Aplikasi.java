@@ -10,8 +10,14 @@ package models;
  *
  * @author JOKER
  */
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -59,9 +65,19 @@ public class Aplikasi {
     public Collection<Kelompok> getListKelompok() {
         return listKelompok;
     }
-    
-   
-    
+
+    public void setListPembimbing(Collection<Pembimbing> listPembimbing) {
+        this.listPembimbing = listPembimbing;
+    }
+
+    public void setListLokasiGladi(Collection<LokasiGladi> listLokasiGladi) {
+        this.listLokasiGladi = listLokasiGladi;
+    }
+
+    public void setListMahasiswa(Collection<Mahasiswa> listMahasiswa) {
+        this.listMahasiswa = listMahasiswa;
+    }
+
     private void resetMenu() {
         this.menuChoice = 0;
         this.menuLevel = 0;
@@ -353,6 +369,11 @@ public class Aplikasi {
             }
         }
         
+    }
+    
+    public void addpem(String nama,String id,String hp){
+        Pembimbing p = new Pembimbing(nama,id,hp);
+        listPembimbing.add(p);
     }
     
     public void addGeladi(String nama, String lokasi, int kuota) {

@@ -6,11 +6,13 @@
 
 package models;
 
+import java.io.Serializable;
+
 /**
  *
  * @author JOKER
  */
-public abstract class Orang {
+public abstract class Orang implements Serializable {
 
     private String nama;
     private String noId;

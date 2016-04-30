@@ -10,9 +10,10 @@ package models;
  *
  * @author JOKER
  */
+import java.io.Serializable;
 import java.util.Collection;
 
-public class LokasiGladi {
+public class LokasiGladi implements Serializable {
     private String kota;
     private int id;
     private int kuota;

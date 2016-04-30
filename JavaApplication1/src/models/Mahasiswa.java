@@ -6,11 +6,13 @@
 
 package models;
 
+import java.io.Serializable;
+
 /**
  *
  * @author JOKER
  */
-public class Mahasiswa extends Orang {
+public class Mahasiswa extends Orang implements Serializable {
     private int idKelompok;
     private int lokasi;
 

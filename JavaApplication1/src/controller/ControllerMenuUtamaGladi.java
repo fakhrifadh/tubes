@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import models.serial;
 
 /**
  *
@@ -50,6 +51,15 @@ public class ControllerMenuUtamaGladi implements ActionListener {
             new ControllerMenuTambahPem(model);
             
         }
+        if (source.equals(menuutama.getButtonkeluar())){
+            menuutama.dispose();
+            serial sr = new serial();
+            sr.savedatapem(model.getListPembimbing());
+            sr.savedatalokasi(model.getListLokasiGladi());
+            sr.savedatamhs(model.getListMahasiswa());
+            
+        }
+        
         
     }
     

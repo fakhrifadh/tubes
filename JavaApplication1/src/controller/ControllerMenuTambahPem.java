@@ -51,8 +51,7 @@ public class ControllerMenuTambahPem implements ActionListener {
                 String id = menutambahpem.getFieldregisid().getText();
                 String nama = menutambahpem.getFieldregisnama().getText();
                 String hp = menutambahpem.getFieldregishp().getText();
-                Pembimbing p = new Pembimbing(nama,id,hp);
-                model.getListPembimbing().add(p);
+                model.addpem(nama, id, hp);
                 JOptionPane.showMessageDialog(null, "Pembimbing Berhasil Ditambah");
                 menutambahpem.dispose();
                 new ControllerMenuUtamaGladi(model);

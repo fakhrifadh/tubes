@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import models.serial;
 
 /**
  *
@@ -23,6 +24,7 @@ public class ControllerMenuHalamanUtamaDosen implements ActionListener {
     Aplikasi model;
     MenuHalamanUtamaDosen MHUdosen;
     String id;
+    
 
     public ControllerMenuHalamanUtamaDosen(Aplikasi model,String id) {
         this.model = model;
@@ -37,6 +39,7 @@ public class ControllerMenuHalamanUtamaDosen implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
         if (source.equals(MHUdosen.getButtonkeluar())){
+            
             MHUdosen.dispose();
             new ControllerMenuUtamaGladi(model);
             
